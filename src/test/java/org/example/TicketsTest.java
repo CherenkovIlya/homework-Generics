@@ -67,7 +67,7 @@ public class TicketsTest {
         repo.add(ticket1);
         repo.add(ticket2);
         repo.removeById(1);
-        Tickets[] expected = { ticket2};
+        Tickets[] expected = {ticket2};
         Tickets[] actual = repo.findAll();
     }
 
@@ -86,7 +86,7 @@ public class TicketsTest {
         repo.add(ticket1);
         repo.add(ticket2);
 
-        Tickets[] expected = { ticket1, ticket2};
+        Tickets[] expected = {ticket1, ticket2};
         Tickets[] actual = manager.searchByFromAndTo("BCN");
 
         Assertions.assertArrayEquals(expected, actual);
@@ -98,43 +98,43 @@ public class TicketsTest {
         repo.add(ticket2);
         //ticket2.setDepartureAirport("VNO");
 
-        Tickets[] expected = { ticket1, ticket2};
+        Tickets[] expected = {ticket1, ticket2};
         Tickets[] actual = manager.searchByFromAndTo("VNO");
 
         Assertions.assertArrayEquals(expected, actual);
     }
 
-   // @Test
-   // public void searchByTo() {
-       // repo.add(ticket1);
-        //repo.add(ticket2);
+    // @Test
+    // public void searchByTo() {
+    // repo.add(ticket1);
+    //repo.add(ticket2);
 
-        //Tickets[] expected = { ticket1};
-        //Tickets[] actual = manager.searchByTo("BCN");
+    //Tickets[] expected = { ticket1};
+    //Tickets[] actual = manager.searchByTo("BCN");
 
-       // Assertions.assertArrayEquals(expected, actual);
+    // Assertions.assertArrayEquals(expected, actual);
     //}
 
     //@Test
     //public void searchByToAll() {
-      //  repo.add(ticket1);
-       // repo.add(ticket2);
-       // ticket2.setArrivalAirport("BCN");
+    //  repo.add(ticket1);
+    // repo.add(ticket2);
+    // ticket2.setArrivalAirport("BCN");
 
-       // Tickets[] expected = { ticket1, ticket2};
-       // Tickets[] actual = manager.searchByTo("BCN");
+    // Tickets[] expected = { ticket1, ticket2};
+    // Tickets[] actual = manager.searchByTo("BCN");
 
-      //  Assertions.assertArrayEquals(expected, actual);
-   // }
+    //  Assertions.assertArrayEquals(expected, actual);
+    // }
 
-   @Test
+    @Test
     public void compareToEquals() {
-       repo.add(ticket1);
-       repo.add(ticket2);
+        repo.add(ticket1);
+        repo.add(ticket2);
 
-       Tickets[] tickets = { ticket1, ticket2};
-       Arrays.sort(tickets);
-   }
+        Tickets[] tickets = {ticket1, ticket2};
+        Arrays.sort(tickets);
+    }
 
     @Test
     public void compareToLess() {
@@ -142,7 +142,7 @@ public class TicketsTest {
         repo.add(ticket1);
         repo.add(ticket2);
 
-        Tickets[] tickets = { ticket1, ticket2};
+        Tickets[] tickets = {ticket1, ticket2};
         Arrays.sort(tickets);
     }
 
@@ -152,7 +152,7 @@ public class TicketsTest {
         repo.add(ticket1);
         repo.add(ticket2);
 
-        Tickets[] tickets = { ticket1, ticket2};
+        Tickets[] tickets = {ticket1, ticket2};
         Arrays.sort(tickets);
     }
 
